@@ -28,7 +28,7 @@ Promise.all(
 ).then(windows => {
 	for (var wnd of windows) {
 		listState.push({
-			name: getString('window_with_tab', wnd.tabs.length),
+			name: getString('window_with_tab', wnd.tabs.length).replace('|','-'),
 			tabs: wnd.tabs,
 			returnValue: wnd.id
 		});
